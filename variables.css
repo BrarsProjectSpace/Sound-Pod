@@ -1,0 +1,57 @@
+/* Primary Colors */
+:root {
+    --color-bg: #1c1c1c;
+    /* dark background for site */
+    --color-surface: #1E1E1E;
+    /* slightly lighter for cards/sections */
+    --color-text: #E0E0E0;
+    /* main text color */
+    --color-text-secondary: #B3B3B3;
+    /* secondary / muted text */
+
+    --color-accent: #FF4081;
+    /* pink accent for logo or highlights */
+    --color-accent-hover: #F50057;
+    /* darker pink for hover effects */
+
+    --color-button-bg: #2C2C2C;
+    /* button background */
+    --color-button-text: #FFFFFF;
+    /* button text */
+    --color-button-hover: #3D3D3D;
+    /* hover background */
+
+    --color-seekbar-bg: #333333;
+    /* seek bar background */
+    --color-seekbar-fill: #FF4081;
+    /* seek bar fill (pink) */
+
+    --color-border: #2A2A2A;
+    /* subtle borders for sections/cards */
+}
+
+/* Example usage */
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Arial', sans-serif;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Logo styling */
+#logo {
+    background-color: var(--color-accent);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 24px;
+}
