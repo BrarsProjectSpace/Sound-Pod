@@ -216,3 +216,4 @@ seekbar.addEventListener('input', () => {
 // INITIALIZE APP
 // -------------------------
 main();
+
