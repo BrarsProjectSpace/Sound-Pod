@@ -1,6 +1,9 @@
 // let url = 'https://brarsprojectspace.github.io/Sound-Pod'
 
-let songSection = document.querySelector('.song-section')
+let songSection = document.querySelector('.song-section');
+let audioPlayer = document.getElementById('audio-player');
+let currentIndex = 0;
+let songs = [];
 
 
 async function getsongs() {
@@ -25,10 +28,10 @@ async function getsongs() {
 }
 
 async function main() {
-    let songs = await getsongs();
+    songs = await getsongs();
     // console.log(songs);
 
-    songs.forEach(songUrl => {
+    songs.forEach((songUrl, index) => {
         let card = document.createElement('div');
         card.classList.add('card');
 
@@ -58,6 +61,11 @@ async function main() {
         card.appendChild(playlist);
         card.appendChild(artistName);
 
+        card.addEventListener('click', () => {
+            currentIndex = index;
+            playSong(currentIndex);
+        })
+
         // Append card to song-section
         songSection.appendChild(card);
 
@@ -65,3 +73,65 @@ async function main() {
 }
 
 main();
+
+
+function playSong(index) {
+    audioPlayer.src = songs[index];
+    audioPlayer.play();
+    updateControls();
+}
+function updateControls() {
+    document.querySelector('.play-btn').style.display = 'none';
+    document.querySelector('.pause-btn').style.display = 'inline-block';
+}
+
+const playbtn = document.querySelector('.play-btn');
+const pausebtn = document.querySelector('.pause-btn');
+const nextbtn = document.querySelector('.next-btn');
+const backbtn = document.querySelector('.back-btn');
+
+
+playbtn.addEventListener('click', () => {
+    audioPlayer.play();
+    updateControls();
+});
+
+pausebtn.addEventListener('click', () => {
+    audioPlayer.pause();
+    playbtn.style.display = 'inline-block';
+    pausebtn.style.display = 'none';
+});
+
+nextbtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % songs.length;
+    playSong(currentIndex);
+});
+
+backbtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + songs.length) % songs.length;
+    playSong(currentIndex);
+});
+
+audioPlayer.addEventListener('ended', () => {
+    currentIndex = (currentIndex + 1) % songs.length;
+    playSong(currentIndex);
+});
+
+
+// seek bar
+const seekbar = document.getElementById('seekbar');
+
+audioPlayer.addEventListener('timeupdate', () => {
+    // update seekbar max and value
+    seekbar.max = audioPlayer.duration || 0;
+    seekbar.value = audioPlayer.currentTime;
+});
+
+seekbar.addEventListener('input', () => {
+    audioPlayer.currentTime = seekbar.value;
+});
+
+audioPlayer.addEventListener('timeupdate', () => {
+    let percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+    seekbar.style.background = `linear-gradient(to right, var(--color-accent) 0%, var(--color-accent) ${percent}%, var(--color-seekbar-bg) ${percent}%, var(--color-seekbar-bg) 100%)`;
+});
