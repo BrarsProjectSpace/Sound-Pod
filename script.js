@@ -19,7 +19,7 @@ seekbar.disabled = true; // Disabled initially because no song is loaded
 // FETCH SONGS FROM SERVER
 // -------------------------
 async function getSongs() {
-    let folder = await fetch("https://brarsprojectspace.github.io/Sound-Pod/songs"); // Fetch folder contents
+    let folder = await fetch("http://127.0.0.1:3000/songs"); // Fetch folder contents
     let response = await folder.text();
 
     let div = document.createElement("div"); // Temporary div to parse HTML
