@@ -1,0 +1,110 @@
+
+@media screen and (max-width:390px) {
+    .song-section {
+        padding: 0px;
+        width: 95%;
+        /* background-color: white;  */
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .card {
+        padding: 0;
+        width: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width:630px) {
+    .song-section {
+        padding: 0px;
+        width: 95%;
+        /* background-color: white;  */
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .card {
+        padding: 0;
+        width: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width:790px) {
+    .song-section {
+        padding: 0px;
+        width: 95%;
+        /* background-color: white;  */
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .card {
+        padding: 0;
+        width: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:923px) {
+    .song-section {
+        padding: 0px;
+        width: 95%;
+        /* background-color: white;  */
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .card {
+        padding: 0;
+        width: 135px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (min-width:1024px) {
+    .song-section {
+        padding: 0px;
+        width: 87%;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .card {
+        padding: 0;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+

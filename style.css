@@ -90,17 +90,19 @@ body {
 .card {
     margin: 2px;
     border-radius: 10px;
-    height: 250px;
+    height: 350px;
     width: 210px;
     /* background-color: var(--color-surface); */
     overflow: hidden;
+    /* display: flex; */
+    /* flex-direction: column; */
 
 }
 
 .card .img {
-    height: 70%;
+    height: 200px;
     width: 100%;
-    background-color: rgb(68, 68, 68);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
 
@@ -144,116 +146,6 @@ body {
     background: #ff6390;
     /* brighter accent on hover */
 }
-
-
-
-@media screen and (max-width:390px) {
-    .song-section {
-        padding: 0px;
-        width: 95%;
-        /* background-color: white;  */
-        align-items: center;
-        justify-content: center;
-        gap: 2px;
-    }
-
-    .card {
-        padding: 0;
-        width: 135px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-}
-
-
-@media screen and (max-width:630px) {
-    .song-section {
-        padding: 0px;
-        width: 95%;
-        /* background-color: white;  */
-        align-items: center;
-        justify-content: center;
-        gap: 2px;
-    }
-
-    .card {
-        padding: 0;
-        width: 135px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-}
-
-
-@media screen and (max-width:790px) {
-    .song-section {
-        padding: 0px;
-        width: 95%;
-        /* background-color: white;  */
-        align-items: center;
-        justify-content: center;
-        gap: 2px;
-    }
-
-    .card {
-        padding: 0;
-        width: 135px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width:923px) {
-    .song-section {
-        padding: 0px;
-        width: 95%;
-        /* background-color: white;  */
-        align-items: center;
-        justify-content: center;
-        gap: 2px;
-    }
-
-    .card {
-        padding: 0;
-        width: 135px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-}
-
-
-@media screen and (min-width:1024px) {
-    .song-section {
-        padding: 0px;
-        width: 87%;
-        align-items: center;
-        justify-content: center;
-        gap: 2px;
-    }
-
-    .card {
-        padding: 0;
-        width: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-}
-
-
-
-
-
-
 
 
 
